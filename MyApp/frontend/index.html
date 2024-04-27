@@ -1,13 +1,27 @@
-<!-- 文件：index.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>MyApp</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1, p {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>MyApp - Random Number Generator</h1>
+    <h1>MyApp</h1>
+    <h1>Random Number Generator</h1>
     <button onclick="getRandomNumber()">Generate Number</button>
     <p id="number">Press the button to generate a number.</p>
+    <input id="numberDisplay" type="text" readonly>
 
     <script>
         function getRandomNumber() {
