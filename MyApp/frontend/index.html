@@ -1,0 +1,23 @@
+<!-- 文件：index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyApp</title>
+</head>
+<body>
+    <h1>MyApp - Random Number Generator</h1>
+    <button onclick="getRandomNumber()">Generate Number</button>
+    <p id="number">Press the button to generate a number.</p>
+
+    <script>
+        function getRandomNumber() {
+            fetch('http://localhost:1000/random-number')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('number').innerText = 'Random Number: ' + data.number;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
